@@ -3,10 +3,14 @@
 [ext_resource type="Script" path="res://scripts/characters/PlayerController.gd" id="1_player"]
 [ext_resource type="Texture2D" path="res://assets/sprites/protector.jpg" id="2_sprite"]
 [ext_resource type="Texture2D" path="res://assets/sprites/woman_guitar.png" id="3_woman"]
-[ext_resource type="Texture2D" path="res://assets/sprites/luna.png" id="6_luna"]
+[ext_resource type="Texture2D" path="res://assets/sprites/luna_performance.png" id="6_luna"]
 [ext_resource type="Texture2D" path="res://assets/sprites/cat.png" id="7_cat"]
+[ext_resource type="Texture2D" path="res://assets/sprites/owl_wings.png" id="9_owl"]
 [ext_resource type="PackedScene" path="res://scenes/components/Interactable.tscn" id="4_interactable"]
 [ext_resource type="PackedScene" path="res://scenes/ui/DialogueBox.tscn" id="5_dialogue"]
+[ext_resource type="PackedScene" path="res://scenes/characters/EnemyGuard.tscn" id="8_guard"]
+[ext_resource type="PackedScene" path="res://scenes/items/SecurityTerminal.tscn" id="10_terminal"]
+[ext_resource type="PackedScene" path="res://scenes/ui/RhythmBar.tscn" id="11_rhythm"]
 
 [ext_resource type="Script" path="res://scenes/world/World.gd" id="1_world_script"]
 
@@ -48,12 +52,28 @@ position = Vector2(1500, 550)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_luna")
 
+[node name="OwlNPC" type="Sprite2D" parent="."]
+position = Vector2(900, 500)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("9_owl")
+
 [node name="CatNPC" type="Sprite2D" parent="."]
 position = Vector2(1100, 700)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_cat")
 
+[node name="EnemyGuard" parent="." instance=ExtResource("8_guard")]
+position = Vector2(600, 800)
+
+[node name="SecurityTerminal" parent="." instance=ExtResource("10_terminal")]
+position = Vector2(400, 800)
+linked_guard_path = NodePath("../EnemyGuard")
+
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="RhythmBar" parent="UI" instance=ExtResource("11_rhythm")]
+visible = false
+position = Vector2(960, 540) # Center screen
 
 [node name="DialogueBox" parent="UI" instance=ExtResource("5_dialogue")]
 
