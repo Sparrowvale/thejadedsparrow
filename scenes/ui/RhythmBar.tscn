@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/RhythmBar.gd" id="1_script"]
+
+[node name="RhythmBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 800.0
+offset_right = 1160.0
+offset_bottom = 840.0
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="Target" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 940.0
+offset_top = 800.0
+offset_right = 980.0
+offset_bottom = 840.0
+color = Color(0, 1, 0, 0.5)
+
+[node name="Cursor" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 790.0
+offset_right = 770.0
+offset_bottom = 850.0
+color = Color(1, 1, 1, 1)

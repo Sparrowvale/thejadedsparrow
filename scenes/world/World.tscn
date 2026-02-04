@@ -8,11 +8,14 @@
 [ext_resource type="PackedScene" path="res://scenes/components/Interactable.tscn" id="4_interactable"]
 [ext_resource type="PackedScene" path="res://scenes/ui/DialogueBox.tscn" id="5_dialogue"]
 
+[ext_resource type="Script" path="res://scenes/world/World.gd" id="1_world_script"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1"]
 radius = 40.0
 height = 150.0
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_world_script")
 
 [node name="Background" type="ColorRect" parent="."]
 offset_right = 1920.0
@@ -53,4 +56,11 @@ texture = ExtResource("7_cat")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="DialogueBox" parent="UI" instance=ExtResource("5_dialogue")]
+
+[node name="TestBattleButton" type="Button" parent="UI"]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 200.0
+offset_bottom = 100.0
+text = "DEBUG: FIGHT!"
 
