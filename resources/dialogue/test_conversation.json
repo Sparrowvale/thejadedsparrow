@@ -1,0 +1,39 @@
+{
+	"start": {
+		"text": "The wind howls through the ruins. The woman watches you, hand resting on her blade.",
+		"speaker": "Narrator",
+		"choices": [
+			{"text": "Approach cautiously.", "next": "approach"},
+			{"text": "Ignore her.", "next": "ignore"}
+		]
+	},
+	"approach": {
+		"text": "'You carry a heavy burden, traveler,' she says, eyeing the child.",
+		"speaker": "Woman",
+		"choices": [
+			{"text": "'We survive.',", "next": "survive"},
+			{"text": "'Back off.',", "next": "aggressive"}
+		]
+	},
+	"ignore": {
+		"text": "You walk past. She chuckles darkly. 'Suit yourself.'",
+		"speaker": "Woman",
+		"choices": [
+			{"text": "(End Conversation)", "next": "end"}
+		]
+	},
+	"survive": {
+		"text": "'Survival is not enough,' she whispers. 'But it is a start.'",
+		"speaker": "Woman",
+		"choices": [
+			{"text": "(End Conversation)", "next": "end"}
+		]
+	},
+	"aggressive": {
+		"text": "Her grip tightens on the katana. 'Easy, fox. I am not your enemy... yet.'",
+		"speaker": "Woman",
+		"choices": [
+			{"text": "(End Conversation)", "next": "end"}
+		]
+	}
+}
