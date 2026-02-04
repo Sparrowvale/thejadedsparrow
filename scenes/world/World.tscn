@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/characters/PlayerController.gd" id="1_player"]
 [ext_resource type="Texture2D" path="res://assets/sprites/protector.jpg" id="2_sprite"]
-[ext_resource type="Texture2D" path="res://assets/sprites/woman.jpg" id="3_woman"]
+[ext_resource type="Texture2D" path="res://assets/sprites/woman_guitar.png" id="3_woman"]
+[ext_resource type="Texture2D" path="res://assets/sprites/luna.png" id="6_luna"]
+[ext_resource type="Texture2D" path="res://assets/sprites/cat.png" id="7_cat"]
 [ext_resource type="PackedScene" path="res://scenes/components/Interactable.tscn" id="4_interactable"]
 [ext_resource type="PackedScene" path="res://scenes/ui/DialogueBox.tscn" id="5_dialogue"]
 
@@ -37,6 +39,16 @@ texture = ExtResource("3_woman")
 
 [node name="Interactable" parent="WomanNPC" instance=ExtResource("4_interactable")]
 dialogue_file = "res://resources/dialogue/test_conversation.json"
+
+[node name="LunaNPC" type="Sprite2D" parent="."]
+position = Vector2(1500, 550)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_luna")
+
+[node name="CatNPC" type="Sprite2D" parent="."]
+position = Vector2(1100, 700)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_cat")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
